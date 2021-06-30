@@ -1,0 +1,172 @@
+/*
+**************************************************************
+  @author : A.M Zumry
+  Registration Number : IT19175126
+************************************************************
+*/
+
+.outer-shadow-temp {
+    box-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
+}
+
+
+/* --------------------
+Templates download title section
+-------------------- */
+
+.Templates-section-title {
+    padding: 0 15px;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.Templates-section-title h2 {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 700;
+    color: #000000;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.Templates-row .Templates-section-title {
+    padding: 0 15px;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.Templates-row .Templates-section-title h2 {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 700;
+    color: #000000;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.Templates-section .Templates-section-title {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.Templates-section .Templates-custom-underline {
+    position: relative;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+}
+
+.Templates-custom-underline,
+.Templates-custom-underline:hover,
+.Templates-custom-underline:focus,
+.Templates-custom-underline:active {
+    color: black;
+    text-decoration: none;
+}
+.Templates-custom-underline::after {
+    content: "";
+    position: absolute;
+}
+
+.Templates-section .Templates-section-title{
+    height:125px;
+    display: inline-block;
+    font-size: 30px;
+    margin:30px 0 0 0px;
+    text-align: center;
+}
+
+.Templates-section-title .Templates-custom-underline::after {
+    top: 65%;
+    height: 2px !important;
+    width: 40%;
+    left: 31% ;
+    margin-top: 20px;
+    background-color: black;
+    transition: 0.4s ease-out all .1s;
+}
+
+.Templates-section-title:hover .Templates-custom-underline::after {
+    width: 90%;
+    left: 5%;
+    transition: 0.5s ease all;
+}
+
+
+/* --------------------
+Templates download section
+-------------------- */
+
+.Templates-container {
+    max-width: 1140px;
+    margin: auto;
+}
+
+.Templates-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Templates-section{
+    padding: 80px 0 80px;
+    min-height: 100vh;
+    background-color: #F0F0F0;
+}
+
+.Templates-section .Templates-item {
+    flex: 0 0 30.33%;
+    max-width: 33.33%;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Templates-section .Templates-item-inner{
+    padding: 50px 15px;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+}
+
+.Templates-section .Templates-item-inner h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #555555;
+    margin: 0 0 10px;
+    text-transform: capitalize;
+}
+
+.Templates-section .Templates-item-inner p {
+    font-size: 16px;
+    color: #666666;
+    margin: 0;
+    line-height: 26px;
+}
+
+/* --------------------
+Templates download button section
+-------------------- */
+
+.Download-btn {
+    width: 150px;
+    background-color: #5995fd;
+    border: none;
+    outline: none;
+    height: 49px;
+    border-radius: 15px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.Download-btn:hover {
+    background-color: #4d84e2;
+}

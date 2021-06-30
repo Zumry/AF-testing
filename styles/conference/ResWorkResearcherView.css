@@ -1,0 +1,232 @@
+/* ************************************* */
+/**
+ * @author : M.N.M Akeel
+ * Registration Number : IT19153414
+ */
+/* ************************************* */
+
+.RWItem-style-view{
+    max-width: 600px;
+    padding: 10px 20px;
+    background: #f4f7f8;
+    padding: 20px;
+    background: #f2f2f2;
+    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    margin: 0px 70px 10px 100px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+.RWItem-style-view fieldset{
+    border: none;
+}
+.RWItem-style-view legend {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+.RWItem-style-view label {
+    display: block;
+    margin-bottom: 8px;
+}
+.RWItem-style-view input[type="text"],
+.RWItem-style-view input[type="date"],
+.RWItem-style-view input[type="file"],
+.RWItem-style-view select {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    outline: 0;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background: #e6e6e6;
+    color: #63686e;
+    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin: 0 0 30px;
+}
+.RWItem-style-view input[type="text"]:focus,
+.RWItem-style-view input[type="date"]:focus,
+.RWItem-style-view input[type="file"] focus,
+.RWItem-style-view select:focus{
+    background: #e6e6e6;
+}
+.RWItem-style-view select{
+    -webkit-appearance: menulist-button;
+    height:35px;
+}
+.RWItem-style-view .number {
+    background: #1abc9c;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 4px;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+    border-radius: 15px 15px 15px 0px;
+}
+
+.btnView
+{
+    position: relative;
+    display: block;
+    padding: 5px 5px 5px 5px;
+    color: #FFF;
+    background: #6dabe4;
+    font-size: 14px;
+    text-align: center;
+    font-style: normal;
+    width: 29%;
+    border: 1px solid #62a1e0;
+    border-width: 1px 1px 3px;
+    border-radius: 3px;
+    margin: 0px 0 0 0px;
+    float: right;
+    cursor: pointer;
+}
+
+.btnView:hover
+{
+    background: #62a1e0;
+}
+
+.btnAccept
+{
+    position: relative;
+    display: block;
+    padding: 5px 5px 5px 5px;
+    color: #FFF;
+    background: #6dabe4;
+    font-size: 13px;
+    text-align: center;
+    font-style: normal;
+    width: 15%;
+    border: 1px solid #62a1e0;
+    border-width: 1px 1px 3px;
+    border-radius: 3px;
+    float: right;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.btnAccept:hover
+{
+    background: #62a1e0;
+}
+
+.btnDecline
+{
+    position: relative;
+    display: block;
+    padding: 5px 5px 5px 5px;
+    color: #FFF;
+    background: #ff6801;
+    font-size: 13px;
+    text-align: center;
+    font-style: normal;
+    width: 15%;
+    border: 1px solid #ff6801;
+    border-width: 1px 1px 3px;
+    border-radius: 3px;
+    float: right;
+    cursor: pointer;
+}
+
+.btnDecline:hover
+{
+    background: #e96302;
+}
+
+.resTag{
+    width: 150px;
+    padding: 5px;
+}
+.resTd{
+    width: 450px;
+    padding: 5px;
+}
+
+#fileTd{
+ margin-top: 5px;
+}
+
+#pTitle{
+    float: left;
+    font-size: 22px;
+}
+
+#stateS{
+    float: right;
+    margin-top: 5px;
+    margin-right: 30px;
+    color: #07bc0c;
+}
+
+#divisionColor{
+    background: #F0F0F0;
+}
+
+/* *---------------------------  Title Styling ----------------------------------------* */
+
+.box {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.custom-underline {
+    position: relative;
+    display: inline-block;
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+}
+
+.normal-underline:hover {
+    color: #444;
+    text-decoration: underline;
+}
+
+.custom-underline,
+.custom-underline:hover,
+.custom-underline:focus,
+.custom-underline:active {
+    color: black;
+    text-decoration: none;
+}
+
+.custom-underline::after {
+    content: "";
+    position: absolute;
+}
+
+.box{
+    height:125px;
+    display: inline-block;
+    margin:30px 0 0 0px;
+    text-align: center;
+}
+
+.box .custom-underline::after {
+    top: 65%;
+    height: 2px !important;
+    width: 40%;
+    left: 31%;
+    margin-top: 20px;
+    background-color: black;
+    transition: 0.4s ease-out all .1s;
+}
+
+.box:hover .custom-underline::after {
+    width: 90%;
+    left: 5%;
+    transition: 0.5s ease all;
+}
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */

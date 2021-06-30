@@ -1,0 +1,154 @@
+/*
+**************************************************************
+  @author : A.M Zumry
+  Registration Number : IT19175126
+************************************************************
+*/
+
+.outer-shadow-Tickets {
+    box-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
+}
+
+/* --------------------
+Attendees tickets title section
+-------------------- */
+
+.Tickets-section-title {
+    padding: 0 15px;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.Tickets-section-title h2 {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 700;
+    color: #000000;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.Tickets-section .Tickets-section-title {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.Tickets-section .Tickets-custom-underline {
+    position: relative;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+}
+
+.Tickets-custom-underline,
+.Tickets-custom-underline:hover,
+.Tickets-custom-underline:focus,
+.Tickets-custom-underline:active {
+    color: black;
+    text-decoration: none;
+}
+.Tickets-custom-underline::after {
+    content: "";
+    position: absolute;
+}
+
+.Tickets-section .Tickets-section-title{
+    height:125px;
+    display: inline-block;
+    font-size: 30px;
+    margin:30px 0 0 0px;
+    text-align: center;
+}
+
+.Tickets-section-title .Tickets-custom-underline::after {
+    top: 65%;
+    height: 2px !important;
+    width: 40%;
+    left: 31% ;
+    margin-top: 20px;
+    background-color: black;
+    transition: 0.4s ease-out all .1s;
+}
+
+.Tickets-section-title:hover .Tickets-custom-underline::after {
+    width: 90%;
+    left: 5%;
+    transition: 0.5s ease all;
+}
+
+/* --------------------
+Attendees tickets section
+-------------------- */
+
+.Tickets-container {
+    max-width: 1140px;
+    margin: auto;
+}
+
+.Tickets-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Tickets-section{
+    padding: 80px 0 80px;
+    min-height: 100vh;
+    background-color: #F0F0F0;
+}
+
+.Tickets-section .Tickets-item {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Tickets-section .Tickets-item-inner{
+    padding: 50px 15px;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+}
+
+.Tickets-section .Tickets-item-inner h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #555555;
+    margin: 0 0 10px;
+    text-transform: capitalize;
+}
+
+.Tickets-section .Tickets-item-inner p {
+    font-size: 16px;
+    color: #666666;
+    margin: 0;
+    line-height: 26px;
+}
+
+/* --------------------
+Attendees tickets button section
+-------------------- */
+
+.Start-btn {
+    width: 150px;
+    background-color: #5995fd;
+    border: none;
+    outline: none;
+    height: 49px;
+    border-radius: 15px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.Start-btn:hover {
+    background-color: #4d84e2;
+}

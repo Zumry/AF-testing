@@ -1,0 +1,201 @@
+/*
+**************************************************************
+  @author : A.M Zumry
+  Registration Number : IT19175126
+************************************************************
+*/
+
+
+.outer-shadow-Profile {
+    box-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
+}
+
+/* --------------------
+User Profile title section
+-------------------- */
+.profile-row .profile-section-title {
+    padding: 0 15px;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.profile-row .profile-section-title h2 {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 700;
+    color: #000000;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.profile-section .profile-section-title {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.profile-section .profile-custom-underline {
+    position: relative;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+}
+
+.profile-custom-underline,
+.profile-custom-underline:hover,
+.profile-custom-underline:focus,
+.profile-custom-underline:active {
+    color: black;
+    text-decoration: none;
+}
+.profile-custom-underline::after {
+    content: "";
+    position: absolute;
+}
+
+.profile-section .profile-section-title{
+    height:125px;
+    display: inline-block;
+    font-size: 30px;
+    margin:30px 0 0 0px;
+    text-align: center;
+}
+
+.profile-section-title .profile-custom-underline::after {
+    top: 65%;
+    height: 2px !important;
+    width: 40%;
+    left: 31% ;
+    margin-top: 20px;
+    background-color: black;
+    transition: 0.4s ease-out all .1s;
+}
+
+.profile-section-title:hover .profile-custom-underline::after {
+    width: 90%;
+    left: 5%;
+    transition: 0.5s ease all;
+}
+
+
+/* --------------------
+User Profile section
+-------------------- */
+
+.profile-section {
+    padding: 50px 0 80px;
+    min-height: 100vh;
+    background-color: #F0F0F0;
+}
+
+.profile-container {
+    max-width: 1140px;
+    margin: auto;
+}
+
+.profile-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profile-section .profile-item {
+    flex: 1 0 50%;
+    max-width: 100%;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profile-section .profile-item-inner {
+    padding: 30px 15px;
+    border-radius: 5px;
+    /*text-align: center;*/
+    width: 100%;
+}
+
+.profile-section .profile-item-inner h1 {
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    color: #555555;
+    margin: 0 10px 10px;
+    text-transform: capitalize;
+}
+.profile-section .profile-item-inner h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #555555;
+    margin: 0 10px 10px;
+    text-transform: capitalize;
+}
+ .profile-section .profile-item-inner .la {
+     font-size: 20px;
+     font-weight: 600;
+     color: #555555;
+     margin: 0 10px 10px;
+ }
+.profile-section .profile-item-inner .label {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+    margin: 5px;
+}
+.profile-section .profile-item-inner div {
+    padding: 7px;
+}
+
+.profile-section .profile-change {
+    flex: 47%;
+    max-width: 50%;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.profile-section input[type="submit"]
+{
+    width: 165px;
+    background-color: tomato;
+    border: none;
+    outline: none;
+    height: 49px;
+    border-radius: 15px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.profile-section input[type="submit"]:hover{
+    background-color: #e96302;
+}
+
+.profile-section .input-Field {
+    max-width: 380px;
+    width: 100%;
+    background-color: #cacaca;
+    margin: 10px 0;
+    height: 45px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 100%;
+    padding: 0 0.4rem;
+    position: relative;
+}
+
+.profile-section .input-Field  input {
+    /*font-family: Georgia, "Times New Roman", Times, serif;*/
+    background: none;
+    max-width: 380px;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */

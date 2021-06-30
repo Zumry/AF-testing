@@ -1,0 +1,249 @@
+/* ************************************* */
+/**
+ * @author : M.N.M Akeel
+ * Registration Number : IT19153414
+ */
+/* ************************************* */
+
+.RItem-style-view{
+    max-width: 900px;
+    padding: 10px 20px;
+    background: #f4f7f8;
+    padding: 20px;
+    background: #f2f2f2;
+    margin: 0 15px 10px 100px;
+    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    font-family: "Raleway", sans-serif !important;
+}
+.RItem-style-view fieldset{
+    border: none;
+}
+.RItem-style-view legend {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+.RItem-style-view label {
+    display: block;
+    margin-bottom: 8px;
+}
+.RItem-style-view input[type="text"],
+.RItem-style-view input[type="date"],
+.RItem-style-view input[type="file"],
+.RItem-style-view select {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    outline: 0;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background: #e6e6e6;
+    color: #63686e;
+    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin: 0 0 30px;
+}
+.RItem-style-view input[type="text"]:focus,
+.RItem-style-view input[type="date"]:focus,
+.RItem-style-view input[type="file"] focus,
+.RItem-style-view select:focus{
+    background: #e6e6e6;
+}
+.RItem-style-view select{
+    -webkit-appearance: menulist-button;
+    height:35px;
+}
+.RItem-style-view .number {
+    background: #1abc9c;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 4px;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+    border-radius: 15px 15px 15px 0px;
+}
+
+#btnWork
+{
+    position: relative;
+    display: block;
+    padding: 9px 9px 8px 9px;
+    color: #FFF;
+    background: #ff6801;
+    font-size: 14px;
+    text-align: center;
+    font-style: normal;
+    width: 70%;
+    border: 1px solid #e96302;
+    border-width: 1px 1px 3px;
+    border-radius: 3px;
+    margin: 150px -10px -45px 85px;
+}
+
+#btnWork:hover
+{
+    background: #e96302;
+}
+
+#btnPaper
+{
+    position: relative;
+    display: block;
+    padding: 9px 9px 8px 9px;
+    color: #FFF;
+    background: #ff6801;
+    font-size: 14px;
+    text-align: center;
+    font-style: normal;
+    width: 70%;
+    border: 1px solid #e96302;
+    border-width: 1px 1px 3px;
+    border-radius: 3px;
+    margin: 40px -10px -35px 85px;
+}
+
+#btnPaper:hover
+{
+    background: #e96302;
+}
+
+#btnPayment
+{
+    position: relative;
+    display: block;
+    padding: 9px 9px 8px 9px;
+    color: #FFF;
+    background: #1abc9c;
+    font-size: 14px;
+    text-align: center;
+    font-style: normal;
+    width: 70%;
+    border: 1px solid #1abc9c;
+    border-width: 1px 1px 3px;
+    border-radius: 3px;
+    margin: 40px -10px -35px 85px;
+}
+
+#btnPayment:hover
+{
+    background: #169980;
+}
+
+.resTag{
+    width: 150px;
+    padding: 5px;
+}
+.resTd{
+    width: 500px;
+    padding: 5px;
+}
+
+#pTitle{
+    float: left;
+    font-size: 22px;
+}
+
+#VHeadLine{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#btnTag{
+    width: 240px;
+}
+
+#statCol{
+    color: red;
+    margin-left: 20px;
+}
+
+#payCol{
+    color: red;
+    margin-left: 130px;
+}
+
+#approval{
+    display: inline-block;
+    margin-top: 50px;
+}
+
+.linkButton{
+    display: block;
+    width: 80px;
+    background: #62a1e0;
+    padding: 10px;
+    text-align: center;
+    border-radius: 3px;
+    margin-left: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+
+/* *---------------------------  Title Styling ----------------------------------------* */
+
+.box {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.custom-underline {
+    position: relative;
+    display: inline-block;
+    font-size: 28px !important;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+}
+
+.normal-underline:hover {
+    color: #444;
+    text-decoration: underline;
+}
+
+.custom-underline,
+.custom-underline:hover,
+.custom-underline:focus,
+.custom-underline:active {
+    color: black;
+    text-decoration: none;
+}
+
+.custom-underline::after {
+    content: "";
+    position: absolute;
+}
+
+.box{
+    height:125px;
+    display: inline-block;
+    margin:30px 0 0 0px;
+    text-align: center;
+}
+
+.box .custom-underline::after {
+    top: 65%;
+    height: 2px !important;
+    width: 40%;
+    left: 31%;
+    margin-top: 20px;
+    background-color: black;
+    transition: 0.4s ease-out all .1s;
+}
+
+.box:hover .custom-underline::after {
+    width: 90%;
+    left: 5%;
+    transition: 0.5s ease all;
+}
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */

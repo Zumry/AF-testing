@@ -1,0 +1,31 @@
+{
+  "name": "cmsfrontend",
+  "version": "1.0.0",
+  "description": "Frontend of Conference Management System",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AkeelMNM/ConferenceMS-Frontend-Development.git"
+  },
+  "authors": "M.N.M Akeel, A.M Zumry, M.A.M Nusky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AkeelMNM/ConferenceMS-Frontend-Development/issues"
+  },
+  "homepage": "https://github.com/AkeelMNM/ConferenceMS-Frontend-Development#readme",
+  "dependencies": {
+    "aos": "^2.3.4",
+    "parcel": "^2.0.0-beta.3.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0",
+    "react-toastify": "^7.0.4"
+  },
+  "devDependencies": {
+    "@parcel/transformer-image": "^2.0.0-beta.3.1"
+  }
+}

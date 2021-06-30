@@ -1,0 +1,329 @@
+/* ************************************* */
+/**
+ * @author : M.N.M Akeel
+ * Registration Number : IT19153414
+ */
+/* ************************************* */
+
+.box {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.custom-underline {
+    position: relative;
+    display: inline-block;
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+}
+
+.normal-underline:hover {
+    color: #444;
+    text-decoration: underline;
+}
+
+.custom-underline,
+.custom-underline:hover,
+.custom-underline:focus,
+.custom-underline:active {
+    color: black;
+    text-decoration: none;
+}
+
+.custom-underline::after {
+    content: "";
+    position: absolute;
+}
+
+.box{
+    height:125px;
+    display: inline-block;
+    margin:30px 0 0 0px;
+    text-align: center;
+}
+
+.box .custom-underline::after {
+    top: 65%;
+    height: 2px !important;
+    width: 40%;
+    left: 31%;
+    margin-top: 20px;
+    background-color: black;
+    transition: 0.4s ease-out all .1s;
+}
+
+.box:hover .custom-underline::after {
+    width: 90%;
+    left: 5%;
+    transition: 0.5s ease all;
+}
+
+.discPara{
+    text-align: center;
+    font-family: "Cambria Math", serif;
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: -20px;
+    color: #9195a2;
+    font-weight: 600;
+}
+
+.paraDiv{
+    width: 65%;
+    margin-left: 260px;
+}
+
+#bigDivision{
+    background: #F0F0F0;
+    height: 950px;
+}
+
+#bigDivisionPs{
+    background: #F0F0F0;
+    height: 1000px;
+}
+
+#divisionColor{
+    background: #F0F0F0;
+}
+
+#listBigDiv{
+    width: 50%;
+    height: 500px;
+
+}
+
+.listDiv{
+    float: left;
+    margin-left: 50px;
+}
+
+.conTopic{
+    font-size: 28px;
+}
+
+#topicDiv{
+    width: 65%;
+    height: 300px;
+    margin-left: 200px;
+    margin-top: 60px;
+}
+
+#workTopicDiv{
+    width: 65%;
+    height: 300px;
+    margin-left: 260px;
+}
+
+#attRTopicDiv{
+    width: 65%;
+    height: 300px;
+    margin-left: 260px;
+    margin-top: -60px;
+}
+
+#aFeeTopicDiv{
+    width: 65%;
+    height: 200px;
+    margin-left: 260px;
+    margin-top: 100px;
+}
+
+.topicList li{
+    font-size: 17px;
+    font-family: "Open Sans", sans-serif;
+    line-height: 30px;
+}
+
+.noteDiv{
+    width: 80%;
+    background: #02b808;
+}
+
+.noteLabel{
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 250px;
+    margin-top: 30px;
+    color: #757682;
+}
+
+#subMDiv{
+    width: 80%;
+    margin-left: 200px;
+}
+
+#subTopic{
+    display: inline-block;
+    font-size: 28px;
+    margin-left: -290px;
+    margin-top: 50px;
+    font-weight: bold;
+ }
+
+#subPara{
+    text-align: left;
+    font-family: "Cambria Math", serif;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+#paperSubDiv{
+    width: 65%;
+    height: 300px;
+    margin-left: 260px;
+    margin-top: -50px;
+}
+
+#iDateDiv{
+    width: 65%;
+    height: 300px;
+    margin-left: 200px;
+    margin-top: -30px;
+}
+
+.iDateText{
+    font-weight: bold;
+}
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* ------------------------- About Page Styling ------------------------------- */
+
+.form-style-about{
+    max-width: 500px;
+    padding: 20px;
+    margin: 0 auto 10px 30px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    float: left;
+}
+.form-style-about fieldset{
+    border: none;
+}
+.form-style-about legend {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+.form-style-about label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+.form-style-about input[type="text"],
+.form-style-about textarea{
+    font-family: Georgia, "Times New Roman", Times, serif;
+    border-radius: 2px;
+    font-size: 15px;
+    outline: 0;
+    padding: 10px;
+    width: 400px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin: 0 0 30px;
+}
+
+
+.form-style-about input[type="submit"]
+{
+    position: relative;
+    display: block;
+    padding: 9px 9px 8px 9px;
+    color: #FFF;
+    background: #6dabe4;
+    font-size: 16px;
+    text-align: center;
+    font-style: normal;
+    width: 30%;
+    border: 1px solid #62a1e0;
+    border-width: 1px 1px 3px;
+    border-radius: 3px;
+    margin: -15px 0 15px;
+}
+.form-style-about input[type="submit"]:hover
+{
+    background: #62a1e0;
+    cursor: pointer;
+}
+
+
+#contTitle{
+    font-size: 30px;
+    margin-bottom: 30px;
+    display: inline-block;
+}
+
+.footerCTextDe{
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 40px;
+}
+
+#contInfoTitleD{
+    margin-left: 100px;
+    margin-top: 30px;
+    width: 80%;
+    height: 30px;
+}
+
+#contInfoLabelD {
+    font-size: 24px;
+    display: inline-block;
+}
+
+#contactInfoD{
+    margin-left: 120px;
+    margin-top: 15px;
+    height: 500px;
+    float: left;
+}
+
+#uniTitleDe{
+    font-size: 25px;
+    margin-bottom: 20px;
+    display: inline-block;
+    font-family: "Raleway", sans-serif;
+}
+
+.footerCTextE{
+    font-size: 22px;
+}
+
+#vl {
+    border-left: 1px solid black;
+    height: 500px;
+    margin-left: 50%;
+    margin-top: 20px;
+}
+
+/**------------------------------- Workshop All View ---------------------------------------------------- **/
+
+.WAItem-style-view{
+    max-width: 900px;
+    padding: 10px 20px;
+    background: #f4f7f8;
+    padding: 20px;
+    background: #f2f2f2;
+    margin: 0 15px 10px 300px;
+    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    font-family: "Raleway", sans-serif !important;
+}
+
+.wAresTag{
+    width: 400px;
+    padding: 5px;
+    font-size: 17px;
+}
+
+#pTitle{
+    float: left;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
