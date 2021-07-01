@@ -1,6 +1,6 @@
 import React from "react";
 import '../styles/HeaderFooter.css';
-
+import {withRouter} from "react-router-dom";
 /**
  * @author : M.N.M Akeel
  * Registration Number : IT19153414
@@ -11,14 +11,23 @@ class Header extends React.Component{
         super(props);
 
         this.state = {
-            type:localStorage.getItem('type')
+            type:null,
         }
     }
 
 
-    logout(){
+    componentDidMount() {
+        this.setState({type:localStorage.getItem('type')})
+    }
+
+    componentWillUnmount() {
+        localStorage.removeItem('headerValue')
+    }
+
+    logout(event){
+        event.preventDefault()
         localStorage.clear();
-        history.push('/');
+        this.props.history.push('/');
     }
 
     forGuestView(){
@@ -86,7 +95,7 @@ class Header extends React.Component{
                 <label id={'HeadTitle'}>ICAF 2021</label>
                 <div id={'logRDiv'}>
                     <a href={'/userProfile'} id={'regLink'}>User Profile</a>
-                    <a href={'#'} id={'logLink'} onClick={this.logout()}>Logout</a>
+                    <a href={'#'} id={'logLink'} onClick={event => this.logout(event)}>Logout</a>
                 </div>
 
             </div>
@@ -114,7 +123,7 @@ class Header extends React.Component{
                 <label id={'HeadTitle'}>ICAF 2021</label>
                 <div id={'logRDiv'}>
                     <a href={'/userProfile'} id={'regLink'}>User Profile</a>
-                    <a href={'#'} id={'logLink'} onClick={this.logout()} >Logout</a>
+                    <a href={'#'} id={'logLink'} onClick={event => this.logout(event)}>Logout</a>
                 </div>
             </div>
             <div>
@@ -140,7 +149,7 @@ class Header extends React.Component{
                 <label id={'HeadTitle'}>ICAF 2021</label>
                 <div id={'logRDiv'}>
                     <a href={'/userProfile'} id={'regLink'}>User Profile</a>
-                    <a href={'#'} id={'logLink'} onClick={this.logout()} >Logout</a>
+                    <a href={'#'} id={'logLink'} onClick={event => this.logout(event)} >Logout</a>
                 </div>
 
             </div>
@@ -200,7 +209,7 @@ class Header extends React.Component{
                 <label id={'HeadTitle'}>ICAF 2021</label>
                 <div id={'logRDiv'}>
                     <a href={'/userProfile'} id={'regLink'}>User Profile</a>
-                    <a href={'#'} id={'logLink'} onClick={this.logout()} >Logout</a>
+                    <a href={'#'} id={'logLink'} onClick={event => this.logout(event)}>Logout</a>
                 </div>
 
             </div>
@@ -229,7 +238,7 @@ class Header extends React.Component{
                 <label id={'HeadTitle'}>ICAF 2021</label>
                 <div id={'logRDiv'}>
                     <a href={'/userProfile'} id={'regLink'}>User Profile</a>
-                    <a href={'#'} id={'logLink'} onClick={this.logout()} >Logout</a>
+                    <a href={'#'} id={'logLink'} onClick={event => this.logout(event)} >Logout</a>
                 </div>
 
             </div>
@@ -253,28 +262,33 @@ class Header extends React.Component{
     }
 
     render() {
+        //console.log('header log',localStorage.getItem('headerValue'))
         return <div>
             {
-                this.state.type === 'Researcher'?
-                    (this.forResearcherView())
-                :this.state.type === 'WorkshopConductor'?
-                    (this.forWConductorView())
-                :this.state.type === 'Editor'?
-                    (this.forEditorView())
-                :this.state.type === 'Reviewer'?
-                    (this.forReviewerView())
-                :this.state.type === 'Attendee'?
-                    (this.forAttendeeView())
-                :this.state.type === 'Researcher'?
-                    (this.forResearcherView())
-                :this.state.type === 'Administrator'?
-                    (<></>)
-                :localStorage.getItem('loginValue') === 'value' ?
-                     (<></>)
-                :(this.forGuestView())
+                localStorage.getItem('headerValue') !== 'value' ?
+                    (
+                        (
+                            this.state.type === 'Researcher'?
+                                (this.forResearcherView())
+                            :this.state.type === 'WorkshopConductor'?
+                                (this.forWConductorView())
+                            :this.state.type === 'Editor'?
+                                    (this.forEditorView())
+                            :this.state.type === 'Reviewer'?
+                                    (this.forReviewerView())
+                            :this.state.type === 'Attendee'?
+                                    (this.forAttendeeView())
+                            :this.state.type === 'Administrator'?
+                                    (<></>)
+                            :this.state.type === null ?
+                                    (this.forGuestView())
+                            :(this.forGuestView())
+                       )
+                    )
+                 :(<></>,localStorage.removeItem('headerValue'))
             }
         </div>
     }
 }
 
-export default Header;
+export default withRouter(Header);

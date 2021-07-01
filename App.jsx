@@ -41,8 +41,8 @@ class App extends React.Component{
     }
 
     render() {
-        return <Router>
-            <Header/>
+        return <Router forceRefresh={true}>
+            <Header />
             <Switch>
                 <Route exact path="/" component={Home}/>
                 <Route  path="/about" component={About}/>

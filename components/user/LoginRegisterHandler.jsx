@@ -44,9 +44,22 @@ class LoginRegisterHandler extends Component {
             // The regular expression to validate the email pattern
             emailRegex: /\S+@\S+\.\S+/,
         }
-        localStorage.setItem('loginValue', 'value');
     }
 
+    componentDidMount() {
+        localStorage.setItem('headerValue', 'value');
+        localStorage.setItem('footerValue', 'value');
+        if(this.props.match.params.id === 'false'){
+            this.setState({isActive:false})
+        }
+
+        console.log('value',this.props.match.params.id,'value of isActive',this.state.isActive)
+    }
+
+    componentWillUnmount() {
+        localStorage.removeItem('headerValue');
+        localStorage.removeItem('footerValue');
+    }
 
     /**
      * This function is to submit Login account proposal
@@ -72,9 +85,9 @@ class LoginRegisterHandler extends Component {
          * Displaying Error message if any input field is empty
          */
         if(User.email === ''){
-            toast.warning("File Email.", options);
+            toast.warning("Fill Email.", options);
         }else if(User.password === ''){
-            toast.warning("File Password", options);
+            toast.warning("Fill Password", options);
         }else if(this.state.emailRegex.test(User.email)){
             // console.log(JSON.stringify(User));
             UserServices.loginAccount(User)
