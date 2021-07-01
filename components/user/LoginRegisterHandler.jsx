@@ -52,8 +52,6 @@ class LoginRegisterHandler extends Component {
         if(this.props.match.params.id === 'false'){
             this.setState({isActive:false})
         }
-
-        console.log('value',this.props.match.params.id,'value of isActive',this.state.isActive)
     }
 
     componentWillUnmount() {

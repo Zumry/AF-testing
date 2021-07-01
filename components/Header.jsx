@@ -262,7 +262,6 @@ class Header extends React.Component{
     }
 
     render() {
-        //console.log('header log',localStorage.getItem('headerValue'))
         return <div>
             {
                 localStorage.getItem('headerValue') !== 'value' ?
