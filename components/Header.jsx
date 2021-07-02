@@ -134,7 +134,7 @@ class Header extends React.Component{
                         <ul className={'menu'}>
                             <li><a href="/">Home</a></li>
                             <li style={{width:"250px"}}><a href="/display-workshops">Create Content</a></li>
-                            <li style={{width:"250px"}}><a href="/display-conference/:id">View Contents</a></li>
+                            <li style={{width:"250px"}}><a href="/list-ContentView">View Contents</a></li>
                             <li><a href="/About">Contact</a></li>
                         </ul>
                     </nav>

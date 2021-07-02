@@ -351,10 +351,12 @@ table {
     border-collapse: collapse;
 }
 .table {
-    width: 100%;
+    width: 75%;
     margin-bottom: 1rem;
     color: #212529;
+    margin-left: 300px;
 }
+
 .table td, .table th {
     padding: .75rem;
     vertical-align: top;
@@ -373,9 +375,9 @@ table {
     margin-right: auto;
     margin-left: auto;
 }
-/**, ::after, ::before {
+*, ::after, ::before {
     box-sizing: border-box;
-}*/
+}
 .form-group {
     margin-bottom: 1rem;
 }
@@ -391,6 +393,10 @@ table {
     border-radius: .25rem;
     width: 500px;
     margin-left: 300px;
+}
+.text-center {
+    margin-left: 230px;
+
 }
 /*body {
     margin: 0;

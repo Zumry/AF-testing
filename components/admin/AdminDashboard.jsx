@@ -15,7 +15,7 @@ export default class AdminDashboard extends Component {
 
         }
 
-        this.go=this.go.bind(this);
+
     }
 
     componentDidMount() {
@@ -24,12 +24,16 @@ export default class AdminDashboard extends Component {
         }
     }
 
-    go(){
-        this.props.history.push('go/');
+
+
+    logout(event){
+        localStorage.clear();
+        this.props.history.push('/');
 
     }
     render() {
         return (<div>
+
                     <div className="nav-btn">Menu</div>
                     <div className="admin-container">
 
@@ -44,13 +48,17 @@ export default class AdminDashboard extends Component {
                                     <li className="dashLi"><a className="aDLink" href="/display-conference/:id">View Conference Contents</a></li>
                                 </ul>
                             </div>
+                            <button id={'logOutAdmin'} onClick={event => this.logout(event)}>logout</button>
                         </div>
 
 
                     </div>
 
                 <div className="main-content">
+
+
                     <h2>Admin Dashboard</h2>
+
                     <p>ICAF 2021 Conferences</p>
                     <div className="panel-wrapper">
                         <div className="panel-head">

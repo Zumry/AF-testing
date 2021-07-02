@@ -18,6 +18,11 @@ class AdminViewUsers extends Component {
         }
 
     }
+    logout(event){
+        localStorage.clear();
+        this.props.history.push('/');
+
+    }
 
     componentDidMount(){
         if(localStorage.getItem('_id') === null && localStorage.getItem('type') !== 'Administrator'){
@@ -31,8 +36,24 @@ class AdminViewUsers extends Component {
 
     render() {
         return (
+
             <div>
+                <div className="sidebar">
+                    <div className="navDiv">
+                        <a className="aDLink" href="#"><span id="dashName">ICAF 2021</span></a>
+                        <ul id="dashUl">
+                            <li className="dashLi active"><a className="aDLink" href="#">Dashboard</a></li>
+                            <li className="dashLi"><a className="aDLink" href="/adminCreateUser">Create User</a></li>
+                            <li className="dashLi"><a className="aDLink" href="/approve-conference/:id">View Requests</a></li>
+                            <li className="dashLi"><a className="aDLink" href="/AdminView/">View Users</a></li>
+                            <li className="dashLi"><a className="aDLink" href="/display-conference/:id">View Conference Contents</a></li>
+                        </ul>
+                    </div>
+                    <button id={'logOutAdmin'} onClick={event => this.logout(event)}>logout</button>
+                </div>
+
                 <h2 className="text-center"> Users </h2>
+
 
                 <br></br>
                 <div className="row">

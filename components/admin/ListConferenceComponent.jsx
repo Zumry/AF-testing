@@ -80,8 +80,7 @@ class ListConferenceComponent extends Component {
             <div>
                 <h2 className="text-center"> Conference Content  List </h2>
                 <div className= "row">
-                    <button className="btn btn-primary" onClick={this.displayworkshops}>Workshops</button>
-                    <button className="btn btn-primary" onClick={this.displayconference}>Display</button>
+
 
                 </div>
                 <br></br>
