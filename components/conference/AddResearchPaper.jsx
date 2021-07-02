@@ -68,6 +68,7 @@ class AddResearchPaper extends React.Component{
         }else if (this.state.agreement === false){
             toast.warning("Please Agree to Terms&Conditions.", options)
         }else{
+           toast.success("Uploading", {position: toast.POSITION.TOP_CENTER,autoClose:9000,closeButton:false})
            /**
             * uploading the file in to the aws cloud and storing
             * the details in mongodb
@@ -77,11 +78,12 @@ class AddResearchPaper extends React.Component{
                     researchPaper.researchPFileLocation = response.url
                     ResearchPaperService.submitResearchPaper(researchPaper)
                         .then(res => {
-                            if(res.status === 200){
-                                toast.success("Research Paper Submitted Successfully",options)
-                            }else{
-                                toast.error("Something went wrong!! Try again.",options)
-                            }
+                                if(res.status === 200){
+                                    toast.success("Research Paper Submitted Successfully",options)
+                                    setTimeout(()=>{this.props.history.push("/researchView")},3000)
+                                }else{
+                                    toast.error("Something went wrong!! Try again.",options)
+                                }
                         })
                 })
         }

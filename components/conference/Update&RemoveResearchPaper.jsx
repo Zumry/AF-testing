@@ -112,6 +112,7 @@ class UpdateRemoveResearchPaper extends React.Component{
                     .then(res => {
                         if(res.status === 200){
                             toast.success("Research Paper Submission Updated Successfully",options)
+                            setTimeout(()=>{this.props.history.push("/researchView")},3000)
                         }else{
                             toast.error("Something went wrong!!,Try again.",options)
                         }
@@ -129,7 +130,7 @@ class UpdateRemoveResearchPaper extends React.Component{
             .then(res => {
                 if(res.status === 200){
                     toast.error("Research Paper Submission Removed",options)
-                    this.props.history.push("/");
+                    setTimeout(()=>{this.props.history.push("/researchView")},3000)
                 }else{
                     toast.warning("Something went wrong!!,Try again.",options)
                 }

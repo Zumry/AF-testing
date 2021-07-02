@@ -77,16 +77,24 @@ class AddWorkShop extends React.Component{
         }else if (this.state.agreement === false){
             toast.warning("Please Agree to Terms&Conditions.", options)
         }else{
+            toast.success("Uploading", {position: toast.POSITION.TOP_CENTER,autoClose:9000,closeButton:false})
+            /**
+             * uploading the file in to the aws cloud and storing
+             * the details in mongodb
+             */
             FileUploadService.FileUploads(this.state.file)
                 .then(response =>{
                     WorkShop.fileLocation = response.url
                     WorkShopServices.submitWorkShop(WorkShop)
                         .then(res => {
-                            if(res.status === 200){
-                                toast.success("Workshop Proposal Submitted Successfully",options)
-                            }else{
-                                toast.error("Something went wrong!! Try again.",options)
-                            }
+                            setTimeout(() =>{
+                                if(res.status === 200){
+                                    toast.success("Workshop Proposal Submitted Successfully",options)
+                                    setTimeout(()=>{this.props.history.push("/workShopView")},3000)
+                                }else{
+                                    toast.error("Something went wrong!! Try again.",options)
+                                }
+                            },7000)
                     })
                 })
         }

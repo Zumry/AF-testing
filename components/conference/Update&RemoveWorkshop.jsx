@@ -113,6 +113,7 @@ class UpdateRemoveWorkshop extends React.Component{
                             .then(res => {
                                 if(res.status === 200){
                                     toast.success("Workshop Proposal Updated Successfully",options)
+                                    setTimeout(()=>{this.props.history.push("/workShopView")},3000)
                                 }else{
                                     toast.error("Something went wrong!! Try again.",options)
                                 }
@@ -124,6 +125,7 @@ class UpdateRemoveWorkshop extends React.Component{
                     .then(res => {
                         if(res.status === 200){
                             toast.success("WorkShop Proposal Updated Successfully",options)
+                            setTimeout(()=>{this.props.history.push("/workShopView")},3000)
                         }else{
                             toast.error("Something went wrong!!,Try again.",options)
                         }
@@ -141,6 +143,7 @@ class UpdateRemoveWorkshop extends React.Component{
             .then(res => {
                 if(res.status === 200){
                     toast.error("WorkShop Proposal Removed",options)
+                    setTimeout(()=>{this.props.history.push("/workShopView")},3000)
                 }else{
                     toast.warning("Something went wrong!!,Try again.",options)
                 }
