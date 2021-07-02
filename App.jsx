@@ -80,7 +80,7 @@ class App extends React.Component{
                 <Route path="/approve-conference/:id" component={AdminApproveOrRejectComponent}/>
                 <Route  path="/display-conference/:id" component={DisplayConferenceContents}/>
                 <Route  path="/adminDashboard/" component={AdminDashboard}/>
-                <Route  path="/adminViewUser/" component={AdminViewUsers}/>
+                <Route  path="/adminViewUser" component={AdminViewUsers}/>
             </Switch>
             <Footer/>
         </Router>
