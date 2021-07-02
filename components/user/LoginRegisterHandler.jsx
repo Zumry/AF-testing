@@ -87,7 +87,6 @@ class LoginRegisterHandler extends Component {
         }else if(User.password === ''){
             toast.warning("Fill Password", options);
         }else if(this.state.emailRegex.test(User.email)){
-            // console.log(JSON.stringify(User));
             UserServices.loginAccount(User)
                 .then(res =>{
                     if(res !== null){
@@ -149,15 +148,23 @@ class LoginRegisterHandler extends Component {
         }else if(Account.password === ''){
             toast.warning("File Password", options);
         }else if(this.state.emailRegex.test(Account.email)){
-            UserServices.createAccount(Account)
-                .then(res =>{
-                    if(res.status === 201){
-                        this.setState(initialState);
-                        this.props.history.push(`/login/${true}`);
-                    }else{
-                        toast.error("Something went wrong!!,Try again.",options);
-                    }
-                })
+            if(Account.fullName.match(/^[a-zA-Z ]+$/)){
+                if(Account.password.match(/^.{8,32}$/)){
+                    UserServices.createAccount(Account)
+                        .then(res =>{
+                            if(res.status === 201){
+                                this.setState(initialState);
+                                this.props.history.push(`/login/${true}`);
+                            }else{
+                                toast.error("Something went wrong!!,Try again.",options);
+                            }
+                        })
+                }else{
+                    toast.warning("Password must be 8 characters long", options);
+                }
+            }else {
+                toast.warning("Only letters can type in the Name field", options);
+            }
         }else {
             toast.info("Please enter a valid email!", options);
         }

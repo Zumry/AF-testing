@@ -49,28 +49,34 @@ class AttendeesPayment extends Component {
          * Validating the login account submission input fields
          * Displaying Error message if any input field is empty
          */
-        if(Payment.name === ''){
+        if(this.state.name === ''){
             toast.warning("File Name.", options);
         }else if(Payment.payment === ''){
             toast.warning("File Amount.", options);
-        }else if(Payment.cardNo === '') {
+        }else if(this.state.cardNo === '') {
             toast.warning("File Card Number.", options);
-        }else if(Payment.exDate === ''){
+        }else if(this.state.exDate === ''){
             toast.warning("File Expiration date.", options);
-        }else if(Payment.cvv === ''){
+        }else if(this.state.cvv === ''){
             toast.warning("File cvv.", options);
-        }
-        // else if(validator.isCreditCard(Payment.cardNo)){
-        //     toast.info("File Card Number.", options);
-        // }
-        else {
-            console.log(JSON.stringify(Payment));
+        }else if(!(this.state.name.match(/^[a-zA-Z ]+$/))) {
+            toast.warning("Invalid Name..!!", options);
+        }else if(!(Payment.payment.match(/^[0-9]+$/))){
+            toast.warning("Invalid amount..!!", options);
+        }else if(!(this.state.cardNo.match(/^[0-9].{15}$/))){
+            toast.warning("Invalid Card Number..!!", options);
+        }else if(!(this.state.exDate.match(/[0-9]+[0-9]+\/+[0-9]+[0-9]/))){
+            toast.warning("Invalid card expire Date..!!", options);
+        }else if(!(this.state.cvv.match(/^[0-9].{2}$/))){
+            toast.warning("Invalid CVV Number..!!", options);
+        }else {
             AttendeesServices.makePayment(Payment)
                 .then(res => {
                     if(res.status === 201){
                         toast.success("Made payments successful.", options)
+                        this.props.history.push("/attendeesTickets");
                     }else{
-                        toast.error("Error!! Please fill in the correct details and try again.",options);
+                        toast.warning("Some thing went wrong!! try again.", options);
                     }
                 })
         }

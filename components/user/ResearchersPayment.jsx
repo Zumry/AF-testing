@@ -8,18 +8,19 @@ import ResearchPaperServices from "../../services/ResearchPaperServices";
  * Registration Number : IT19175126
  */
 
+const initialState = {
+    name:'',
+    payment:0,
+    cardNo:'',
+    exDate:'',
+    cvv:''
+}
+
 class ResearchersPayment extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            name:'',
-            payment:0,
-            payDate:'',
-            cardNo:'',
-            exDate:'',
-            cvv:''
-        }
+        this.state = initialState;
     }
 
     componentDidMount() {
@@ -55,21 +56,33 @@ class ResearchersPayment extends Component {
          * Validating the login account submission input fields
          * Displaying Error message if any input field is empty
          */
-        if(Payment.name === ''){
+        if(this.state.name === ''){
             toast.warning("File Name.", options);
-        }else if(Payment.payment === 0){
+        }else if(Payment.payment === ''){
             toast.warning("File Amount.", options);
-        }else if(Payment.cardNo === ''){
-            toast.warning("Enter Card Number.", options);
-        }else if(Payment.exDate === ''){
-            toast.warning("Enter Card Expire date.", options);
-        }else if(Payment.cvv === ''){
-            toast.warning("Enter Card CVV.", options);
-        } else {
-            ResearchPaperServices.researchPaperPayment("60d5717cbcea6f2fe4fe8bc1",Payment)
+        }else if(this.state.cardNo === '') {
+            toast.warning("File Card Number.", options);
+        }else if(this.state.exDate === ''){
+            toast.warning("File Expiration date.", options);
+        }else if(this.state.cvv === ''){
+            toast.warning("File cvv.", options);
+        }else if(!(this.state.name.match(/^[a-zA-Z ]+$/))) {
+            toast.warning("Invalid Name..!!", options);
+        }else if(!(Payment.payment.match(/^[0-9]+$/))){
+            toast.warning("Invalid amount..!!", options);
+        }else if(!(this.state.cardNo.match(/^[0-9].{15}$/))){
+            toast.warning("Invalid Card Number..!!", options);
+        }else if(!(this.state.exDate.match(/[0-9]+[0-9]+\/+[0-9]+[0-9]/))){
+            toast.warning("Invalid card expire Date..!!", options);
+        }else if(!(this.state.cvv.match(/^[0-9].{2}$/))){
+            toast.warning("Invalid CVV Number..!!", options);
+        }else {
+            ResearchPaperServices.researchPaperPayment(localStorage.getItem('_id'),Payment)
                 .then(response =>{
                         if(response.paymentStatus === 'Payment paid'){
                             toast.success("Payment Process Successfully Completed.", options);
+                            set.setState(initialState);
+                            this.props.history.push("/researchView");
                         }else{
                             toast.success("Some thing went wrong!! try again.", options);
                         }

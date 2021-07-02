@@ -22,7 +22,7 @@ import ImgEyeHide from 'url:../../images/Login/eye-hide.png';
  */
 
 const initialState = {
-    username:'',
+    fullName:'',
     password:'',
     email:'',
     type:''
@@ -33,6 +33,7 @@ class AdminCreateUser extends Component {
         super(props);
 
         this.state = {
+            fields: {},
             isPasswordShown: false,
             isEyeImage: true,
             initialState
@@ -82,15 +83,23 @@ class AdminCreateUser extends Component {
         }else if(Account.password === ''){
             toast.warning("File Password", options);
         }else if(emailRegex.test(Account.email)){
-            AdminUserServices.registerAccount(Account)
-                .then(res =>{
-                    if(res.status === 201){
-                        toast.success("Account created Successfully", options);
-                        this.setState(initialState);
-                    }else{
-                        toast.error("Something went wrong!!,Try again.",options);
-                    }
-                })
+            if(Account.fullName.match(/^[a-zA-Z ]+$/)){
+                if(Account.password.match(/^.{8,32}$/)){
+                    AdminUserServices.registerAccount(Account)
+                        .then(res =>{
+                            if(res.status === 201){
+                                toast.success("Account created Successfully", options);
+                                this.setState(initialState);
+                            }else{
+                                toast.error("Something went wrong!!,Try again.",options);
+                            }
+                        })
+                }else{
+                    toast.warning("Password must be 8 characters long", options);
+                }
+            }else{
+                toast.warning("Only letters can type in the Name field", options);
+            }
         }else{
             toast.info("Please enter a valid email!", options);
         }
