@@ -92,7 +92,6 @@ class LoginRegisterHandler extends Component {
                 .then(res =>{
                     if(res !== null){
                         if(res.error !== 'User can not access.'){
-                            toast.success("Login Successful", options);
                             localStorage.setItem('userToken',res.token);
                             localStorage.setItem('_id',res.userID);
                             localStorage.setItem('type',res.type);
@@ -153,8 +152,8 @@ class LoginRegisterHandler extends Component {
             UserServices.createAccount(Account)
                 .then(res =>{
                     if(res.status === 201){
-                        toast.success("Account created Successfully", options);
                         this.setState(initialState);
+                        this.props.history.push(`/login/${true}`);
                     }else{
                         toast.error("Something went wrong!!,Try again.",options);
                     }
