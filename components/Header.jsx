@@ -192,7 +192,8 @@ class Header extends React.Component{
 
                                 <ul>
                                     <li><a href="/attendeesRegistration">Registrations</a></li>
-                                    <li><a href="#">By Ticket</a></li>
+                                    <li><a href="/attendeesPayment">By Ticket</a></li>
+                                    <li><a href="/attendeesTickets">View Tickets</a></li>
                                 </ul>
                             </li>
                             <li><a href="/about">Contact</a></li>
