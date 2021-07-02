@@ -23,7 +23,7 @@ class WorkShopView extends React.Component{
      * Mounting Workshop proposal submission of the relevant user to view
      */
     componentDidMount() {
-        if(localStorage.getItem('_id') === null ){
+        if(localStorage.getItem('_id') === null && localStorage.getItem('type') !== 'WorkshopConductor'){
             this.props.history.push('/');
         }else {
             WorkShopServices.getWorkShopByUser(localStorage.getItem('_id'))

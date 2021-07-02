@@ -40,7 +40,7 @@ class AdminCreateUser extends Component {
     }
 
     componentDidMount() {
-        if(localStorage.getItem('_id') === null ){
+        if(localStorage.getItem('_id') === null && localStorage.getItem('type') !== 'Administrator'){
             this.props.history.push('/');
         }
     }

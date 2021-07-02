@@ -34,7 +34,7 @@ class AddResearchPaper extends React.Component{
     }
 
     componentDidMount() {
-        if(localStorage.getItem('_id') === null ){
+        if(localStorage.getItem('_id') === null && localStorage.getItem('type') !== 'Researcher'){
             this.props.history.push('/');
         }
     }
@@ -46,7 +46,7 @@ class AddResearchPaper extends React.Component{
         event.preventDefault();
 
         let researchPaper = {
-            userID:'123456',
+            userID:localStorage.getItem('_id'),
             authorName:this.state.authorName,
             paperTitle:this.state.paperTitle,
             email:this.state.email,

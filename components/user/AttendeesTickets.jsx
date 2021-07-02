@@ -22,7 +22,7 @@ class AttendeesTickets extends Component {
      * Mounting user details proposal submission of the relevant user to view
      */
     componentDidMount() {
-        if(localStorage.getItem('_id') === null ){
+        if(localStorage.getItem('_id') === null && localStorage.getItem('type') !== 'Attendee'){
             this.props.history.push('/');
         }else{
             AttendeesServices.getTicketsByUserId(localStorage.getItem('_id'))

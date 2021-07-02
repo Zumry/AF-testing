@@ -44,7 +44,7 @@ class UpdateRemoveWorkshop extends React.Component{
      * Mounting Workshop proposal submission details of the relevant user to update form
      */
     componentDidMount() {
-        if(localStorage.getItem('_id') === null ){
+        if(localStorage.getItem('_id') === null && localStorage.getItem('type') !== 'WorkshopConductor' ){
             this.props.history.push('/');
         }else {
             WorkShopServices.getWorkShopByID(this.state.wsID)

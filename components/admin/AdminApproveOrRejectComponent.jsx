@@ -34,17 +34,10 @@ class AdminApproveOrRejectComponent extends Component {
         this.props.history.push(`/update-conferenceapproval/${id}`);
     }
 
-   /* viewconference(id){
-        this.props.history.push(`/view-conference/${id}`);
-    }*/
-
    approveconference(id){
         this.props.history.push(`/Approve-conference/${id}`);
     }
 
-    /*rejectonference(id){
-        this.props.history.push(`/Reject-conference/${id}`);
-    }*/
 
     approvalconference(id){
 
@@ -54,15 +47,9 @@ class AdminApproveOrRejectComponent extends Component {
             .then(response =>{
                 let conference = response;
                 if(conference.status === "Approved"){
-                    /**
-                     * TODO:display the message appropriately
-                     */
-                    console.log("Approved")
+                    alert("Approved")
                 }else{
-                    /**
-                     * TODO:display the message appropriately
-                     */
-                    console.log("Something went wrong, try again!!")
+                    alert("Something went wrong, try again!!")
                 }
             })
     }
@@ -75,22 +62,16 @@ class AdminApproveOrRejectComponent extends Component {
             .then(response =>{
                 let conference = response;
                 if(conference.status === "Rejected"){
-                    /**
-                     * TODO:display the message appropriately
-                     */
-                    console.log("Rejected")
+                    alert("Rejected")
                 }else{
-                    /**
-                     * TODO:display the message appropriately
-                     */
-                    console.log("Something went wrong, try again!!")
+                    alert("Something went wrong, try again!!")
                 }
             })
     }
 
 
     componentDidMount(){
-        if(localStorage.getItem('_id') === null ){
+        if(localStorage.getItem('_id') === null && localStorage.getItem('type') !== 'Administrator'){
             this.props.history.push('/');
         }else {
             ConferenceService.getConference().then((res) => {

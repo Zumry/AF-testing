@@ -21,7 +21,7 @@ class AttendeesPayment extends Component {
     }
 
     componentDidMount() {
-        if(localStorage.getItem('_id') === null ){
+        if(localStorage.getItem('_id') === null && localStorage.getItem('type') !== 'Attendee'){
             this.props.history.push('/');
         }
     }

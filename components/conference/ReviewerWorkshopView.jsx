@@ -31,7 +31,7 @@ class ReviewerWorkshopView extends React.Component{
      * Mounting All Workshop proposal submission details to view
      */
     componentDidMount() {
-        if(localStorage.getItem('_id') === null ){
+        if(localStorage.getItem('_id') === null && localStorage.getItem('type') !== 'Reviewer' ){
             this.props.history.push('/');
         }else {
             WorkShopServices.getWorkShop()

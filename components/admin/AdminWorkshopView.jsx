@@ -20,7 +20,7 @@ class AdminWorkshopView extends React.Component{
      * Mounting All Workshop proposal submission details to view
      */
     componentDidMount() {
-        if(localStorage.getItem('_id') === null ){
+        if(localStorage.getItem('_id') === null && localStorage.getItem('type') !== 'Administrator' ){
             this.props.history.push('/');
         }else {
             ConferenceService.getConference()

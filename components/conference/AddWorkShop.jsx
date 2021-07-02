@@ -35,7 +35,7 @@ class AddWorkShop extends React.Component{
     }
 
     componentDidMount() {
-        if(localStorage.getItem('_id') === null ){
+        if(localStorage.getItem('_id') === null && localStorage.getItem('type') !== 'WorkshopConductor'){
             this.props.history.push('/');
         }
     }

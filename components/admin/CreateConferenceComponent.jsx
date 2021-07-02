@@ -31,7 +31,7 @@ class CreateConferenceComponent extends Component {
     }
 
     componentDidMount() {
-        if(localStorage.getItem('_id') === null ){
+        if(localStorage.getItem('_id') === null && localStorage.getItem('type') !== 'Editor'){
             this.props.history.push('/');
         }
     }

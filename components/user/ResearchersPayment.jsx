@@ -23,7 +23,7 @@ class ResearchersPayment extends Component {
     }
 
     componentDidMount() {
-        if(localStorage.getItem('_id') === null ){
+        if(localStorage.getItem('_id') === null && localStorage.getItem('type') !== 'Researcher'){
             this.props.history.push('/');
         }
     }

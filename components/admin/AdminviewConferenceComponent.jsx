@@ -40,11 +40,10 @@ class AdminviewConferenceComponent extends Component {
 
 
     componentDidMount(){
-        if(localStorage.getItem('_id') === null ){
+        if(localStorage.getItem('_id') === null && localStorage.getItem('type') !== 'Administrator'){
             this.props.history.push('/');
         }else {
             ConferenceService.getConference().then((res) => {
-
                 this.setState({conferences: res.data});
             });
         }
