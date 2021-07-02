@@ -63,7 +63,7 @@ export default class AdminDashboard extends Component {
 
                     <h2>Admin Dashboard</h2>
 
-                    <p>ICAF 2021 Conferences</p>
+                    <p>ICAF 2021 SLIIT </p>
                     <div className="panel-wrapper">
                         <div className="panel-head">
                             3RD INTERNATIONAL CONFERENCE ON ADVANCEMENTS IN COMPUTING 2021

@@ -138,7 +138,7 @@ header .logo span {
 
 .main-content {
     background-color: #fafafa;
-    width: calc(100% - 250px);
+    width: calc(96% - 250px);
     height: 100%;
     margin-left: 250px;
     padding: 20px 30px;
