@@ -80,7 +80,6 @@ class UserProfile extends Component {
                 password:this.state.password,
                 email:this.state.email
             }
-            console.log("Pass : ",Pass);
             UserServices.checkPassword(Pass)
                 .then(res => {
                     if(res !== null){
@@ -89,17 +88,21 @@ class UserProfile extends Component {
                                 email:this.state.NewEmail,
                                 password:this.state.rePassword
                             }
-                            UserServices.updateUser(userID,Account)
-                                .then(res => {
-                                if(res.status === 201){
-                                    toast.success("Password Change Successfully", options);
-                                    console.log(res.body);
-                                    this.clearInputs();
-                                }
-                                else {
-                                    toast.warning('Something went wrong, try again!', options);
-                                }
-                            })
+                            if(Account.password.match(/^.{8,32}$/)){
+                                UserServices.updateUser(userID,Account)
+                                    .then(res => {
+                                        if(res.status === 201){
+                                            toast.success("Password Change Successfully", options);
+                                            console.log(res.body);
+                                            this.clearInputs();
+                                        }
+                                        else {
+                                            toast.warning('Something went wrong, try again!', options);
+                                        }
+                                    })
+                            }else{
+                                toast.warning("Password must be 8 characters long", options);
+                            }
                         }else {
                             toast.warning('Invalid Old Password, Enter correct password!', options);
                         }
@@ -117,6 +120,9 @@ class UserProfile extends Component {
                             toast.success("Email Change Successfully", options);
                             console.log(res.body);
                             this.clearInputs();
+                            setTimeout(function () {
+                                window.location.reload();
+                            }, 200);
                         }else {
                             toast.warning('Something went wrong, try again!', options);
                         }
@@ -127,9 +133,6 @@ class UserProfile extends Component {
         }else{
             toast.warning('Something went wrong, try again!', options);
         }
-        setTimeout(function () {
-            window.location.reload();
-        }, 200);
     }
 
     onChange(event){
