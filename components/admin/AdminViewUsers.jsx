@@ -63,7 +63,7 @@ class AdminViewUsers extends Component {
                             <li className="dashLi"><a className="aDLink" href="/display-conference/:id">View Conference Contents</a></li>
                         </ul>
                     </div>
-                    <button id={'logOutAdmin'} onClick={event => this.logout(event)}>logout</button>
+                    <button id={'logOutAdmin'} onClick={event => this.logout(event)}>Log out</button>
                 </div>
 
                 <h2 className="text-center"> Users </h2>
