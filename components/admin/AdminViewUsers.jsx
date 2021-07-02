@@ -45,7 +45,7 @@ class AdminViewUsers extends Component {
                             <li className="dashLi active"><a className="aDLink" href="#">Dashboard</a></li>
                             <li className="dashLi"><a className="aDLink" href="/adminCreateUser">Create User</a></li>
                             <li className="dashLi"><a className="aDLink" href="/approve-conference/:id">View Requests</a></li>
-                            <li className="dashLi"><a className="aDLink" href="/AdminView/">View Users</a></li>
+                            <li className="dashLi"><a className="aDLink" href="/adminViewUser">View Users</a></li>
                             <li className="dashLi"><a className="aDLink" href="/display-conference/:id">View Conference Contents</a></li>
                         </ul>
                     </div>
