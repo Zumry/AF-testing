@@ -41,14 +41,18 @@ export default class AdminDashboard extends Component {
                             <div className="navDiv">
                                 <a className="aDLink" href="#"><span id="dashName">ICAF 2021</span></a>
                                 <ul id="dashUl">
-                                    <li className="dashLi active"><a className="aDLink" href="#">Dashboard</a></li>
+
+                                    <li className="dashLi"><a className="aDLink" href="/adminDashboard/">Dashboard</a></li>
+                                    <li className="dashLi"><a className="aDLink" href="/userProfile"> Admin User Profile </a></li>
                                     <li className="dashLi"><a className="aDLink" href="/adminCreateUser">Create User</a></li>
                                     <li className="dashLi"><a className="aDLink" href="/approve-conference/:id">View Requests</a></li>
                                     <li className="dashLi"><a className="aDLink" href="/AdminView/">View Users</a></li>
                                     <li className="dashLi"><a className="aDLink" href="/display-conference/:id">View Conference Contents</a></li>
+
+
                                 </ul>
                             </div>
-                            <button id={'logOutAdmin'} onClick={event => this.logout(event)}>logout</button>
+                            <button id={'logOutAdmin'} onClick={event => this.logout(event)}>Log out</button>
                         </div>
 
 
@@ -62,15 +66,17 @@ export default class AdminDashboard extends Component {
                     <p>ICAF 2021 Conferences</p>
                     <div className="panel-wrapper">
                         <div className="panel-head">
-                            React js
+                            ICAC 2020 the next level of Research Initiative of  SLIIT
                         </div>
                         <div className="panel-body">
                             Welcome to the 10th Chapter of ICAF 2021 International Conference on Application Frameworks for Sustainability 2021(IEEE ICIAFS 2021).
 
-                            The theme for the landmark chapter is “Endowing Intelligent Sustainability“ forcing on on artificial intelligence and machine learning based
-                            emerging technologies to improve and foster research in Sri Lanka and the region. As Industry 4.0 unfolds, computers are connected and
-                            communicate with one another to eventually make decisions without human participation. It includes cyber-physical systems, the Internet of
-                            things, cloud computing and cognitive computing.
+                            ICAC Conference was initiated by the Faculty of Computing, SLIIT and the first conference was held in December 2019.
+                            This year, the second conference will be organized for the second time with expanded scope and content.
+                            The 2nd International Conference on Advancements in
+                            Computing (ICAC 2020) will be held at the SLIIT on the 10th and 11th of December 2020.
+                            ICAC 2020 will be an excellent opportunity for researchers to be exposed to the world of innovations through
+                            research and to be able to showcase their talents and share their knowledge with the academia and the industry.
                         </div>
                     </div>
                     <div className="panel-wrapper">
