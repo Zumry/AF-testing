@@ -43,11 +43,11 @@ export default class AdminDashboard extends Component {
                                 <ul id="dashUl">
 
                                     <li className="dashLi"><a className="aDLink" href="/adminDashboard/">Dashboard</a></li>
-                                    <li className="dashLi"><a className="aDLink" href="/userProfile"> Admin User Profile </a></li>
                                     <li className="dashLi"><a className="aDLink" href="/adminCreateUser">Create User</a></li>
                                     <li className="dashLi"><a className="aDLink" href="/approve-conference/:id">View Requests</a></li>
                                     <li className="dashLi"><a className="aDLink" href="/adminViewUser">View Users</a></li>
                                     <li className="dashLi"><a className="aDLink" href="/display-conference/:id">View Conference Contents</a></li>
+                                    <li className="dashLi"><a className="aDLink" href="/userProfile"> Admin Profile </a></li>
 
 
                                 </ul>
@@ -66,39 +66,43 @@ export default class AdminDashboard extends Component {
                     <p>ICAF 2021 Conferences</p>
                     <div className="panel-wrapper">
                         <div className="panel-head">
-                            ICAC 2020 the next level of Research Initiative of  SLIIT
+                            3RD INTERNATIONAL CONFERENCE ON ADVANCEMENTS IN COMPUTING 2021
                         </div>
                         <div className="panel-body">
                             Welcome to the 10th Chapter of ICAF 2021 International Conference on Application Frameworks for Sustainability 2021(IEEE ICIAFS 2021).
 
-                            ICAC Conference was initiated by the Faculty of Computing, SLIIT and the first conference was held in December 2019.
+                            The 3rd International conference on advancements in computing -2021 (ICAC2021) is organized by the Faculty of Computing
+                            of the Sri Lanka Institute of Information Technology (SLIIT) as an open forum for academics along with
+                            industry professionals to present the latest findings and research output and practical deployments in the Computer Science and Information Technology domains.
+                            Primary objective of the ICAC is to uplift the research culture and the quality of research done by Sri Lankan researchers. This conference will create
+                            a platform for national and international researchers to showcase their research output, networking opportunities to discuss innovative ideas, and initiate collaborative work.
+                            ICAC 2019 and ICAC 2020 were successfully conducted with a technical co-sponsorship by IEEE Sri Lanka Section and all publications are available in IEEE Xplore digital library
+
+                            December 9 - 11 in Sri Lanka Institute of Information Technology
+                        </div>
+                    </div>
+                    <div className="panel-wrapper">
+                        <div className="panel-head">
+                            How to Write the Literature Review of your research paper
+                        </div>
+                        <div className="panel-body">
+                            ICAC 2021 will be organizing a series of workshops which will be useful for potential authors and researchers on producing publications of significant quality.
+                            First workshop of the series titled “How to Write the Literature Review of your research paper”
+                            will be conducted by Prof. Chandimal Jayawardena, Dean/Faculty of Computing on 5th July 2021 from 4.00 p.m to 5.00 p.m
+                        </div>
+                    </div>
+                    <div className="panel-wrapper">
+                        <div className="panel-head">
+                            ICAC 2021 the next level of Research Initiative of  SLIIT
+                        </div>
+                        <div className="panel-body">
+                            ICAC Conference was initiated by the Faculty of Computing, SLIIT and the first conference was held in December 2020.
                             This year, the second conference will be organized for the second time with expanded scope and content.
                             The 2nd International Conference on Advancements in
-                            Computing (ICAC 2020) will be held at the SLIIT on the 10th and 11th of December 2020.
-                            ICAC 2020 will be an excellent opportunity for researchers to be exposed to the world of innovations through
+                            Computing (ICAC 2021) will be held at the SLIIT on the 10th and 11th of December 2021.
+                            ICAC 2021 will be an excellent opportunity for researchers to be exposed to the world of innovations through
                             research and to be able to showcase their talents and share their knowledge with the academia and the industry.
-                        </div>
-                    </div>
-                    <div className="panel-wrapper">
-                        <div className="panel-head">
-                            MERN Stack
-                        </div>
-                        <div className="panel-body">
-                            Welcome to "The Complete MERN Stack Course 2021". In this course, we will build an in-depth Social Network website using Node.js, Express, React, and MongoDB along with ES6+. We will start with a blank text editor
-                            and end with a deployed full-stack website on Heroku.
-                            This course also uses the latest React Hooks and Redux which is an absolute joy. Your code will be so much simplified and readable.
-                            At the end of this course, we'll build an entire project(FACEBOOK CLONE) and you will learn how these different technologies work together step by step. We'll first have a look at all the individual building blocks so that we then can also combine them all into one amazing application by the end of the course.
-                        </div>
-                    </div>
-                    <div className="panel-wrapper">
-                        <div className="panel-head">
-                            Koa js
-                        </div>
-                        <div className="panel-body">
-                            In this semester (3YS1) we have a module named Application Frameworks. In order to pass this module,
-                            we need to build a group project using React JS. The project given to us was to build a web application for a Conference Management System. This system will mainly have 4 types of roles: Admin, Editor, Reviewer and User. Editors can add conference details and edit but Admin must approve them before they are published on the website.
-                            Registered users can submit research papers and workshop proposals. Reviewers can approve or reject them and then a notification will be sent to the relevant user.
-                            Guest Users can purchase tickets if they are willing to attend the conference.
+
                         </div>
                     </div>
                 </div>
