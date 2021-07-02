@@ -24,6 +24,7 @@ class AddWorkShop extends React.Component{
         this.state = {
             presenterName:'',
             workShopTitle:'',
+            email:'',
             affiliation:'',
             contactNo:'',
             file:[],
@@ -46,6 +47,7 @@ class AddWorkShop extends React.Component{
         event.preventDefault();
 
         let WorkShop = {
+            userID:localStorage.getItem('_id'),
             presenterName:this.state.presenterName,
             workShopTitle:this.state.workShopTitle,
             email:this.state.email,
@@ -63,6 +65,8 @@ class AddWorkShop extends React.Component{
             toast.warning("Fill Workshop Title", options);
         }else if(WorkShop.presenterName === ''){
             toast.warning("Fill Presenter Name",options )
+        }else if (WorkShop.email === ''){
+            toast.warning("Fill Email Address", options)
         }else if (WorkShop.affiliation === ''){
             toast.warning("Add Affiliation", options)
         }else if (WorkShop.contactNo === ''){
@@ -168,6 +172,11 @@ class AddWorkShop extends React.Component{
                     <div>
                         <label htmlFor={'presenterName'}>Presenter Name</label>
                         <input type={'text'} name={'presenterName'} id={'presenterName'} value={this.state.presenterName}
+                               required onChange={event => this.onChange(event)} />
+                    </div>
+                    <div>
+                        <label htmlFor={'email'}>Email</label>
+                        <input type={'text'} name={'email'} id={'email'} value={this.state.email}
                                required onChange={event => this.onChange(event)} />
                     </div>
                     <div>

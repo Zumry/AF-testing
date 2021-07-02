@@ -223,8 +223,13 @@ class UpdateRemoveWorkshop extends React.Component{
                                onChange={event => this.onChange(event)} />
                     </div>
                     <div>
+                        <label htmlFor={'email'}>New Email</label>
+                        <input type={'text'} name={'email'} id={'email'} value={this.state.email}
+                               onChange={event => this.onChange(event)} />
+                    </div>
+                    <div>
                         <label htmlFor={'affiliation'}>New Affiliation</label>
-                        <input type={'text'} name={'affiliation'} id={'affiliation'} value={this.state.email}
+                        <input type={'text'} name={'affiliation'} id={'affiliation'} value={this.state.affiliation}
                                onChange={event => this.onChange(event)} />
                     </div>
                     <div>
