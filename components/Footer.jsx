@@ -28,7 +28,9 @@ class Footer extends React.Component{
             {
                 localStorage.getItem('footerValue') !== 'value' ?
                     (
-                        <div id={'footer'}>
+                        this.state.type === 'Administrator'?
+                             (<></>)
+                        :(<div id={'footer'}>
                             <div id={'contInfoTitle'}>
                                 <label id={'contInfoLabel'}>Contact Information</label>
                                 <hr/>
@@ -42,10 +44,8 @@ class Footer extends React.Component{
                                 </div>
                                 <label id={'rightsLabel'}>&copy; 2020 SLIIT, developed by 3rd year 1st Semester Students. All Rights Reserved</label>
                             </div>
-                        </div>
+                        </div>)
                     )
-                :this.state.type === 'Administration'?
-                    (<></>)
                 :(<></>,localStorage.removeItem('footerValue'))
             }
         </div>
