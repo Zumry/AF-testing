@@ -39,6 +39,12 @@ class AdminCreateUser extends Component {
         };
     }
 
+    componentDidMount() {
+        if(localStorage.getItem('_id') === null ){
+            this.props.history.push('/');
+        }
+    }
+
     /**
      * This function is to submit admin create account proposal
      */
