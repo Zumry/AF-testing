@@ -33,6 +33,7 @@ import EditConferenceComponent from "./components/admin/EditConferenceComponent"
 import AdminApproveOrRejectComponent from "./components/admin/AdminApproveOrRejectComponent";
 import DisplayConferenceContents from "./components/admin/DisplayConferenceContents";
 import AdminDashboard from "./components/admin/AdminDashboard";
+import AdminViewUsers from "./components/admin/AdminViewUsers";
 
 
 class App extends React.Component{
@@ -79,6 +80,7 @@ class App extends React.Component{
                 <Route path="/approve-conference/:id" component={AdminApproveOrRejectComponent}/>
                 <Route  path="/display-conference/:id" component={DisplayConferenceContents}/>
                 <Route  path="/adminDashboard/" component={AdminDashboard}/>
+                <Route  path="/adminViewUser/" component={AdminViewUsers}/>
             </Switch>
             <Footer/>
         </Router>
