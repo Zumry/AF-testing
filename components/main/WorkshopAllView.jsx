@@ -35,14 +35,17 @@ class WorkShopAllView extends React.Component{
             .catch(err => console.error(err));
 
         /**
-         * Retrieve All the workshop details
+         * Retrieve All the workshop content details
          */
         ConferenceService.getConference()
             .then(WorkshopsCont => {
-                this.setState({WorkshopsCont:WorkshopsCont})})
+                this.setState({WorkshopsCont:WorkshopsCont})
+            })
             .catch(err => console.error(err));
 
-        this.filterDetails(this.state.Workshops,this.state.WorkshopsCont)
+        setTimeout(()=>{
+            this.filterDetails(this.state.Workshops,this.state.WorkshopsCont)
+        },100)
     }
 
     filterDetails(Workshops,workshopContent){
@@ -64,7 +67,6 @@ class WorkShopAllView extends React.Component{
                 })
             }
         })
-
         this.setState({newWorkshops:tempArray})
     }
 
@@ -78,7 +80,6 @@ class WorkShopAllView extends React.Component{
                 <div>
                     {
                         this.state.newWorkshops.map(workshop => {
-                            console.log(workshop)
                             return <WorkshopAllViewListHolder key={workshop._id} Workshop={workshop}/>
                         })
                     }

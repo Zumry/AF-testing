@@ -7,7 +7,6 @@ import React from 'react';
 
 export default function WorkshopAllViewListHolder(props) {
     const {Workshop} = props;
-    console.log(JSON.stringify(Workshop))
     return <div className={'WAItem-style-view'}>
         <table>
             <thead>

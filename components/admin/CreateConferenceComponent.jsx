@@ -40,6 +40,7 @@ class CreateConferenceComponent extends Component {
     getworkshop(id){
         this.props.history.push(`/get-workshop/${id}`);
     }
+
     saveConference =(e)=>{
 
         e.preventDefault();
@@ -51,16 +52,14 @@ class CreateConferenceComponent extends Component {
             status: this.state.status,
             postedDate: this.state.postedDate
         };
-        console.log('conference => '+JSON.stringify(conference));
-        //step5
 
-            ConferenceService.createconference(conference, this.state.id).then( res => {
-                this.props.history.push('/list-ContentView');
+        ConferenceService.createconference(conference, this.state.id).then( res => {
+            toast.success("Conference Content Submitted Successfully",options)
+            this.props.history.push('/list-ContentView');
 
-            });
+        });
 
-
-       /*const options = {
+       const options = {
             position: toast.POSITION.TOP_CENTER,
             hideProgressBar:true,
             autoClose:3000,
@@ -71,7 +70,7 @@ class CreateConferenceComponent extends Component {
          * Validating the Research Paper submission input fields
          * Displaying Error message if any input field is empty
          */
-       /* if(conference.creator === ''){
+      /*  if(conference.creator === ''){
             toast.warning("Fill the Creator's Name", options)
         }else if (conference.conference_title === ''){
             toast.warning("Fill Conference Content Title", options)
@@ -95,8 +94,6 @@ class CreateConferenceComponent extends Component {
         }*/
 
     }
-
-
 
 
     changecreatorHandler= (event) =>{
@@ -127,7 +124,7 @@ class CreateConferenceComponent extends Component {
         if(this.state.id === '_add'){
             return <h3 className="text-center">Add Conference</h3>
         }else{
-            return <h3 className="text-center">Create Conference</h3>
+            return <h3 className="text-centerTitle">Create Conference</h3>
         }
     }
 
@@ -141,8 +138,6 @@ class CreateConferenceComponent extends Component {
                             {
                                 this.getTitle()
                             }
-
-
                             <div className="card-body">
                                 <form>
                                     <div className="form-group">
@@ -164,9 +159,7 @@ class CreateConferenceComponent extends Component {
                                     </div>
                                     <div className="form-group">
                                         <label>Status :</label>
-                                        <input disabled value="Pending"  placeholder="status" name="status" className="form-control"
-                                              />
-
+                                        <input disabled value="Pending"  placeholder="status" name="status" className="form-control"/>
                                     </div>
 
                                     <div className="form-group">
@@ -190,6 +183,7 @@ class CreateConferenceComponent extends Component {
 
                     </div>
                 </div>
+                <div style={{marginTop:'30px'}}></div>
             </div>
         )
     }

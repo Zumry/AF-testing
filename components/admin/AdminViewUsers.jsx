@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import UserServices from "../../services/UserServices";
 import '/styles/admin/Conference.css';
+import ConferenceService from "../../services/ConferenceService";
 
 /*
 *  IT 19167442
@@ -24,6 +25,18 @@ class AdminViewUsers extends Component {
 
     }
 
+    deleteuser(id){
+        UserServices.deleteuser().then( res => {
+            this.setState({Users: this.state.Users.filter(user => user.id !== id)});
+        });
+
+
+    }
+
+    updateuser(id){
+        this.props.history.push(`/update/${id}`);
+    }
+
     componentDidMount(){
         if(localStorage.getItem('_id') === null && localStorage.getItem('type') !== 'Administrator'){
             this.props.history.push('/');
@@ -42,14 +55,15 @@ class AdminViewUsers extends Component {
                     <div className="navDiv">
                         <a className="aDLink" href="#"><span id="dashName">ICAF 2021</span></a>
                         <ul id="dashUl">
-                            <li className="dashLi active"><a className="aDLink" href="#">Dashboard</a></li>
+                            <li className="dashLi"><a className="aDLink" href="/adminDashboard/">Dashboard</a></li>
+                            <li className="dashLi"><a className="aDLink" href="/userProfile"> Admin User Profile </a></li>
                             <li className="dashLi"><a className="aDLink" href="/adminCreateUser">Create User</a></li>
                             <li className="dashLi"><a className="aDLink" href="/approve-conference/:id">View Requests</a></li>
-                            <li className="dashLi"><a className="aDLink" href="/AdminView/">View Users</a></li>
+                            <li className="dashLi"><a className="aDLink" href="/adminViewUser">View Users</a></li>
                             <li className="dashLi"><a className="aDLink" href="/display-conference/:id">View Conference Contents</a></li>
                         </ul>
                     </div>
-                    <button id={'logOutAdmin'} onClick={event => this.logout(event)}>logout</button>
+                    <button id={'logOutAdmin'} onClick={event => this.logout(event)}>Log out</button>
                 </div>
 
                 <h2 className="text-center"> Users </h2>
@@ -63,6 +77,8 @@ class AdminViewUsers extends Component {
                             <th> Username </th>
                             <th> Email </th>
                             <th> Type</th>
+                            <th> Actions</th>
+
 
                         </tr>
 
@@ -76,8 +92,10 @@ class AdminViewUsers extends Component {
                                         <td> {user.fullName}</td>
                                         <td> {user.email}</td>
                                         <td> {user.type}</td>
+                                        <td>
 
-
+                                            <button  onClick={ () => this.deleteuser(user.id)} className="btn btn-danger">Delete </button>
+                                        </td>
                                     </tr>
 
 
