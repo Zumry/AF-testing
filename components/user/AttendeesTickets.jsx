@@ -25,7 +25,7 @@ class AttendeesTickets extends Component {
         if(localStorage.getItem('_id') === null ){
             this.props.history.push('/');
         }else{
-            AttendeesServices.getTicketsByUserId('60db36dcf7520c0da8590d81')
+            AttendeesServices.getTicketsByUserId(localStorage.getItem('_id'))
                 .then(res => {
                     this.setState({tickets:res})
                 }).catch(err => console.error(err));

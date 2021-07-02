@@ -33,7 +33,7 @@ class AttendeesPayment extends Component {
         event.preventDefault();
 
         let Payment = {
-            userID:'12345',
+            userID:localStorage.getItem('_id'),
             payment:this.state.payment
         }
 
