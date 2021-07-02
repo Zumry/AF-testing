@@ -51,14 +51,14 @@ class Workshops extends Component {
     render() {
         return (
             <div>
-                <h2 className="text-center"> Conference Content  List </h2>
+                <h2 className="text-center2"> Conference Content  List </h2>
                 <div className= "row">
 
                 </div>
                 <br></br>
                 <div className="row">
 
-                    <table className="table table-striped table-bordered">
+                    <table className="table2 table-striped2 table-bordered2">
                         <thead>
                         <tr>
                             <th> Creator</th>

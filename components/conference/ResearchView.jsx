@@ -25,9 +25,6 @@ class ResearchView extends React.Component{
         if(localStorage.getItem('_id') === null && localStorage.getItem('type') !== 'Researcher'){
             this.props.history.push('/');
         }else{
-            /**
-             * Change the Parameter need to get the userID from Token
-             */
             ResearchPaperServices.getResearchPaperByUser(localStorage.getItem('_id'))
                 .then(researchPaper => {
                     this.setState({researchPapers:researchPaper})})
