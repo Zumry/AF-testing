@@ -51,7 +51,7 @@ class Workshops extends Component {
     render() {
         return (
             <div>
-                <h2 className="text-center2"> Conference Content  List </h2>
+                <h2 className="text-center2"> Approved Workshops </h2>
                 <div className= "row">
 
                 </div>
