@@ -77,7 +77,7 @@ class AdminViewUsers extends Component {
                             <th> Username </th>
                             <th> Email </th>
                             <th> Type</th>
-                            <th> Actions</th>
+
 
 
                         </tr>
@@ -92,10 +92,7 @@ class AdminViewUsers extends Component {
                                         <td> {user.fullName}</td>
                                         <td> {user.email}</td>
                                         <td> {user.type}</td>
-                                        <td>
 
-                                            <button  onClick={ () => this.deleteuser(user.id)} className="btn btn-danger">Delete </button>
-                                        </td>
                                     </tr>
 
 
