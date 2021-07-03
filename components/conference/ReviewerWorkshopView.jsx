@@ -47,34 +47,40 @@ class ReviewerWorkshopView extends React.Component{
      * this method is to handle if the Reviewer approve Workshop proposal
      */
     approveWorkshop(workshop){
-        let id = research._id;
+        let id = workshop._id;
         let approval = {aStatus:"Approved"}
         WorkShopServices.workShopApproval(id,approval)
             .then(response =>{
-                let researchPaper = response;
-                if(researchPaper.submissionStatus === "Approved"){
+                let workshop = response;
+                if(workshop.proposalStatus === "Approved"){
                     toast.success(`${workshop.workShopTitle} workshop proposal is Approved`,options)
                 }else{
                     toast.error(`Something went wrong, try again!!`,options)
                 }
             })
+        setTimeout(function () {
+            window.location.reload();
+        }, 7000);
     }
 
     /**
      * this method is to handle if the Reviewer reject Workshop proposal
      */
     rejectWorkshop(workshop){
-        let id = research._id;
+        let id = workshop._id;
         let approval = {aStatus:"Rejected"}
         WorkShopServices.workShopApproval(id,approval)
             .then(response =>{
-                let researchPaper = response;
-                if(researchPaper.submissionStatus === "Rejected"){
+                let workshop = response;
+                if(workshop.proposalStatus === "Rejected"){
                     toast.error(`${workshop.workShopTitle} workshop proposal is Rejected`,options)
                 }else{
                     toast.error(`Something went wrong, try again!!`,options)
                 }
             })
+        setTimeout(function () {
+            window.location.reload();
+        }, 7000);
     }
 
     render() {
