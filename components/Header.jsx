@@ -81,6 +81,7 @@ class Header extends React.Component{
                                     <li><a href="/attendeesRegistration">Registrations</a></li>
                                 </ul>
                             </li>
+                            <li><a href="/templatesDownload">Templates</a></li>
                             <li><a href="/about">Contact</a></li>
                         </ul>
                     </nav>
@@ -196,6 +197,7 @@ class Header extends React.Component{
                                     <li><a href="/attendeesTickets">View Tickets</a></li>
                                 </ul>
                             </li>
+                            <li><a href="/templatesDownload">Templates</a></li>
                             <li><a href="/about">Contact</a></li>
                         </ul>
                     </nav>
@@ -225,6 +227,7 @@ class Header extends React.Component{
                             <li style={{width:"230px"}}><a href="/addResearchPaper">Paper Submission</a></li>
                             <li style={{width:"230px"}}><a href="/researchView">View Submissions</a></li>
                             <li style={{width:"230px"}}><a href="/paperSubmission">Submissions Guidelines</a></li>
+                            <li><a href="/templatesDownload">Templates</a></li>
                             <li><a href="/about">Contact</a></li>
                         </ul>
                     </nav>
@@ -254,6 +257,7 @@ class Header extends React.Component{
                             <li style={{width:"230px"}}><a href="/addWorkShop">Workshop Submission</a></li>
                             <li style={{width:"230px"}}><a href="/workShopView">View Submissions</a></li>
                             <li style={{width:"230px"}}><a href="/WorkshopSubmission">Submissions Guideline</a></li>
+                            <li><a href="/templatesDownload">Templates</a></li>
                             <li><a href="/about">Contact</a></li>
                         </ul>
                     </nav>
