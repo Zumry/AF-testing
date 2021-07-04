@@ -55,7 +55,7 @@ class CreateConferenceComponent extends Component {
 
         ConferenceService.createconference(conference, this.state.id).then( res => {
             toast.success("Conference Content Submitted Successfully",options)
-            this.props.history.push('/list-ContentView');
+            this.props.history.push('/display');
 
         });
 

@@ -8,33 +8,23 @@ import '../../styles/user/TemplatesDownload.css';
 
 const files =[
     {
-        name: "Photo 1",
-        file: "International Conference on Application Frameworks 11.",
-        filename: "photo-1.jpg",
-
+        name: "Research paper Template",
+        URL: "https://afprouploadfiles.s3.ap-south-1.amazonaws.com/IEEE_conference_template.docx",
     },
     {
-        name: "Photo 2",
-        file:
-            "International Conference on Application Frameworks 22.",
-        filename: "photo-2.jpg",
+        name: "Sample workshop Template",
+        URL: "https://afprouploadfiles.s3.ap-south-1.amazonaws.com/Sample+Research+Workshop+Proposal.pdf",
     },
     {
-        name: "Photo 3",
-        file:
-            "International Conference on Application Frameworks 333.",
-        filename: "photo-2.jpg",
+        name: "paper Template",
+        URL: "https://afprouploadfiles.s3.ap-south-1.amazonaws.com/Sample+Research+Workshop+Proposal.pdf",
     },{
-        name: "Photo 4",
-        file:
-            "International Conference on Application Frameworks 44.",
-        filename: "photo-2.jpg",
+        name: "Research paper Template",
+        URL: "https://afprouploadfiles.s3.ap-south-1.amazonaws.com/Sample+Research+Workshop+Proposal.pdf",
     },
     {
-        name: "Photo 5",
-        file:
-            "International Conference on Application Frameworks 55.",
-        filename: "photo-2.jpg",
+        name: "Research paper Template",
+        URL: "https://afprouploadfiles.s3.ap-south-1.amazonaws.com/IEEE_conference_template.docx",
     }
 ];
 
@@ -44,6 +34,7 @@ class TemplatesDownload extends Component {
     }
 
     render() {
+
         return <div>
             <div className={"Templates-section"}>
                 <div className={"Templates-container"}>
@@ -56,12 +47,12 @@ class TemplatesDownload extends Component {
 
                     {/*Download Templates items */}
                     <div className={"Templates-row"}>
+
                         {files.map((file, idx) => (
                             <div className={"Templates-item"}>
                                 <div className={"Templates-item-inner outer-shadow-temp"}>
                                     <h3> {file.name} </h3>
-                                    <p> {file.file} </p>
-                                    <button className={"Download-btn"}> Download </button>
+                                    <a href={file.URL} target="_blank" > <button className={"Download-btn"} > Download </button> </a>
                                 </div>
                             </div>
                         ))}
