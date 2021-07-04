@@ -10,21 +10,15 @@ const files =[
     {
         name: "Research paper Template",
         URL: "https://afprouploadfiles.s3.ap-south-1.amazonaws.com/IEEE_conference_template.docx",
-    },
-    {
+    },{
         name: "Sample workshop Template",
         URL: "https://afprouploadfiles.s3.ap-south-1.amazonaws.com/Sample+Research+Workshop+Proposal.pdf",
-    },
-    {
-        name: "paper Template",
-        URL: "https://afprouploadfiles.s3.ap-south-1.amazonaws.com/Sample+Research+Workshop+Proposal.pdf",
     },{
-        name: "Research paper Template",
-        URL: "https://afprouploadfiles.s3.ap-south-1.amazonaws.com/Sample+Research+Workshop+Proposal.pdf",
-    },
-    {
-        name: "Research paper Template",
+        name: "IEEE Research paper Template",
         URL: "https://afprouploadfiles.s3.ap-south-1.amazonaws.com/IEEE_conference_template.docx",
+    },{
+        name: "Event Proposal Template",
+        URL: "https://afprouploadfiles.s3.ap-south-1.amazonaws.com/Sample+Research+Workshop+Proposal.pdf",
     }
 ];
 
