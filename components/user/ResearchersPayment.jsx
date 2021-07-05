@@ -8,19 +8,18 @@ import ResearchPaperServices from "../../services/ResearchPaperServices";
  * Registration Number : IT19175126
  */
 
-const initialState = {
-    name:'',
-    payment:0,
-    cardNo:'',
-    exDate:'',
-    cvv:''
-}
 
 class ResearchersPayment extends Component {
     constructor(props) {
         super(props);
-
-        this.state = initialState;
+        this.state = {
+            id:this.props.match.params.id,
+            name:'',
+            payment:0,
+            cardNo:'',
+            exDate:'',
+            cvv:''
+        };
     }
 
     componentDidMount() {
@@ -43,6 +42,7 @@ class ResearchersPayment extends Component {
             cvv:this.state.cvv,
             paymentStatus:'Payment paid'
         }
+
 
         /* configuring options to display toast message */
         const options = {
@@ -77,17 +77,15 @@ class ResearchersPayment extends Component {
         }else if(!(this.state.cvv.match(/^[0-9].{2}$/))){
             toast.warning("Invalid CVV Number..!!", options);
         }else {
-            ResearchPaperServices.researchPaperPayment(localStorage.getItem('_id'),Payment)
+            ResearchPaperServices.researchPaperPayment(this.state.id,Payment)
                 .then(response =>{
                         if(response.paymentStatus === 'Payment paid'){
                             toast.success("Payment Process Successfully Completed.", options);
-                            set.setState(initialState);
-                            this.props.history.push("/researchView");
+                            setTimeout(()=>{this.props.history.push("/researchView")},3000)
                         }else{
                             toast.success("Some thing went wrong!! try again.", options);
                         }
                 })
-            this.props.history.push(`/researchView`);
         }
 
     }
