@@ -41,6 +41,8 @@ export default function ReviewerResearchListHolder(props){
                             (<span id={'stateS'}>States : Approved</span>)
                         :ResearchPaper.paymentStatus === 'Payment paid' && ResearchPaper.submissionStatus === 'Approved'?
                             (<span id={'stateS'}>States : Approved</span>)
+                        :ResearchPaper.paymentStatus === 'Not Available' && ResearchPaper.submissionStatus === 'Rejected'?
+                                (<span id={'stateS'}>States : Rejected</span>)
                         :(
                             <div>
                                 <button className={'btnAccept'} onClick={() => approvePaper(ResearchPaper)}>Approve</button>
@@ -55,8 +57,10 @@ export default function ReviewerResearchListHolder(props){
                     {
                         ResearchPaper.paymentStatus === 'Not Available' && ResearchPaper.submissionStatus === 'Approved'?
                             (<span id={'stateS'}>Payment : Not paid</span>)
-                            :ResearchPaper.paymentStatus === 'Payment paid' && ResearchPaper.submissionStatus === 'Approved'?
+                        :ResearchPaper.paymentStatus === 'Payment paid' && ResearchPaper.submissionStatus === 'Approved'?
                             (<span id={'stateS'}>Payment : Paid</span>)
+                        :ResearchPaper.paymentStatus === 'Not Available' && ResearchPaper.submissionStatus === 'Rejected'?
+                                (<></>)
                             :(<></>)
                     }
                 </td>

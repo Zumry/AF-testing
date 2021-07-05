@@ -52,7 +52,7 @@ class AddWorkShop extends React.Component{
             workShopTitle:this.state.workShopTitle,
             email:this.state.email,
             affiliation:this.state.affiliation,
-            contactNo:this.state.contactNo,
+            contactNumber:this.state.contactNo,
             conductorNames:this.state.names,
             fileLocation:'',
         }
